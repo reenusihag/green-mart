@@ -1,0 +1,17 @@
+body{
+    overflow-x: hidden;
+
+}
+
+.card img{
+    height:200px ;
+    width: 180px;
+}
+
+.card .card-body p{
+    color: grey;
+}
+
+.card .card-body .price{
+    display: inline;
+}

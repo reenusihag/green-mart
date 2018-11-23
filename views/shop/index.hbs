@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col-sm-6 col-md-4 col-md-offset-4 col-sm-offset-3">
+        <div id="success" class="alert alert-success" {{#if noMessages}}hidden{{/if}}>
+            {{ successMsg }}
+        </div>
+    </div>
+</div>
+
+{{# each products}}
+
+    <div class="row">
+
+        {{#each this }}
+
+            <div class="col-12 col-sm-6 col-md-4 col-xl-3 mt-4">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top mx-auto mt-2 img-responsive" src="{{this.imagePath}}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{{this.title}}</h5>
+                        <p class="card-text">{{this.description}}</p>
+                        <p class="card-text">{{this.vitamins}}</p>
+                        <div class="price">₹ {{this.price}} / {{this.weight}}</div>
+                        <a href="/add-to-cart/{{this._id}}" class="btn btn-success float-right">Add to Bucket</a>
+                    </div>
+                </div>
+            </div>
+
+        {{/each}}
+
+    </div>
+
+{{/each}}
+
+
+
+
+
+
